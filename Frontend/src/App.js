@@ -22,7 +22,7 @@ function App() {
           <Route path="/problemset" element={<Problemset></Problemset>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="/messaging" element={<Messaging></Messaging>}></Route>
+          
           <Route path="/profile/:username" element={<Profile></Profile>}></Route>
         </Routes>
       </BrowserRouter>

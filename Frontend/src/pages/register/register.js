@@ -65,15 +65,15 @@ function Register() {
         //Form Validation
         //checking userExist or not with op username
         let findUser = await fetch(`http://localhost:5000/register/${opusername}`);
-        if (name.length == 0 || email.length == 0) {
+        if (name.length === 0 || email.length === 0) {
             setIsValidNameEmail(false);
         }
-        else if ((password != cPassword) || password.length == 0) {
+        else if ((password !== cPassword) || password.length === 0) {
             setIsValidNameEmail(true);
             setIsExist(false);
             setPassMatch(false);
         }
-        else if (opusername.length == 0) {
+        else if (opusername.length === 0) {
             setIsValidNameEmail(true);
             setIsExist(true);
             setPassMatch(true);

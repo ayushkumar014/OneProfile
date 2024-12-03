@@ -10,7 +10,7 @@ function Login() {
     const [err, setErr] = useState("");
     const navigate = useNavigate();
     async function submit_login() {
-        if (email != "" && password != "") {
+        if (email !== "" && password !== "") {
             setErr(false);
             let result=await fetch("http://localhost:5000/login",{
                 method:'post', 

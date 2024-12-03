@@ -5,8 +5,6 @@ const success = (statusCode, result) => {
         result
     }
 };
-
-
 const error = (statusCode, error) => {
     return {
         "status": "error",
@@ -14,6 +12,4 @@ const error = (statusCode, error) => {
         error
     }
 };
-
-
 module.exports = { success, error };

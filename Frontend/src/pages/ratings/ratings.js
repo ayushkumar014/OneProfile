@@ -27,7 +27,7 @@ function Ratings() {
   const [loading, setLoading] = useState(false);
   const [nameFilter, setNameFilter] = useState('');
   const [countryFilter, setCountryFilter] = useState('');
-  const [instituteFilter, setInstituteFilter] = useState('');
+  // const [instituteFilter, setInstituteFilter] = useState('');
   const options = useMemo(() => countryList().getData(), [])
   const [value, setValue] = useState('');
   const [open, setOpen] = React.useState(true);

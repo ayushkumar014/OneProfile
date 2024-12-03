@@ -235,7 +235,7 @@ function Profile() {
   let cfLink = "https://codeforces.com/profile/" + cf;
   let ccLink = "https://www.codechef.com/users/" + cc;
   let atLink = "https://atcoder.jp/users/" + at;
-  let lcLink = "https://leetcode.com/" + sp;
+  let lcLink = "https://leetcode.com/u/ayushkumar14/" + sp;
   // const [cfProfileLink,setcfLink]=useState
   return (
     <div className='profile-div-backgound-page'>

@@ -19,6 +19,7 @@ app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("common"));
+
 //cloudinary configuration: -
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -31,7 +32,7 @@ app.post('/login', async (req, res) => {
     if (req.body.email && req.body.password) {
         let user = await User.find(req.body).select("-password");
         if (user.length) {
-            const token = jwt.sign({ username: user[0]._id }, jwtKey, { expiresIn: "8h" })
+            const token = jwt.sign({ username: user[0]._id }, jwtKey, { expiresIn: "10d" })
             res.send({ username: user[0].opusername, auth: token });
         }
         else {

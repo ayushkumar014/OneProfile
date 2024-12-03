@@ -28,7 +28,7 @@ function Messaging() {
                 Authorization: `Bearer ${token}`
             }
         });
-        if (result.status == 500 || result.status == 406) {
+        if (result.status === 500 || result.status === 406) {
             LogOutAndNavigateToHome();
             return 0;
         }
@@ -40,7 +40,7 @@ function Messaging() {
     }
 
     return (
-        messageStatus == 1 ? < h1 > Messaging</h1 >
+        messageStatus === 1 ? < h1 > Messaging</h1 >
             : null
     );
 }
